@@ -1,0 +1,10 @@
+--- 
+- hosts: all
+  become: true
+
+  tasks:
+    - name: create a file with ansible playbook
+      file: path=/tmp/hari.txt state=file
+
+    - name: create a directory with ansible playbook
+      file: path=/tmp/rajdir state=directory

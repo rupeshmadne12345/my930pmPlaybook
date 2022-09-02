@@ -1,0 +1,14 @@
+--- #Creating multiple users
+- hosts: all
+  become: true
+  user: ansible
+  connection: ssh
+
+  tasks:
+    - name: creating multiple user accounts
+      user: name="{{item}}" state=present
+      with_items:
+           - Raj
+           - Hari
+           - Sai
+           - Pavan

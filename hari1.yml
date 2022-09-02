@@ -1,0 +1,8 @@
+--- #Ansible vault concept
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: create playbook for encryption
+      user: my 
+

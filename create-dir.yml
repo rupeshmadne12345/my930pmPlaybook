@@ -1,0 +1,11 @@
+--- #Directory creation
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: creating a directory
+      file: 
+        path: /home/ansible/dirfile
+        state: directory

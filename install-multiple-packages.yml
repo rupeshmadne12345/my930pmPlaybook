@@ -1,0 +1,9 @@
+--- 
+- hosts: webservers
+  become: true
+  
+  tasks:
+    - name: install packages
+      yum:
+        name: ['git', 'which', 'docker', 'mysql', 'wget', 'httpd', 'java']
+        state: installed

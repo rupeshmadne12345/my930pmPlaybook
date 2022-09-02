@@ -1,0 +1,16 @@
+--- 
+- name: my test playbook
+  hosts: all
+  become: true
+
+  tasks:
+    - name: remove s/w
+      yum:
+        name: httpd
+        state: absent
+
+    - name: start service
+      service:
+        name: httpd
+        state: started
+

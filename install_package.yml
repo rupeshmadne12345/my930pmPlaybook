@@ -1,0 +1,10 @@
+--- # installing a s/w
+- hosts: webservers 
+  
+
+  tasks:
+    - name: install docker s/w
+      yum:
+        name: docker
+        state: present
+
